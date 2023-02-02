@@ -1,0 +1,77 @@
+.parent {
+    width: 550px;
+    margin: 10px auto;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card-1,
+.card-2 {
+    position: relative;
+    background-color: #EEE;
+    float: left;    
+    width: calc((100% - 40px) / 2);
+    height: 300px;
+    text-align: center;
+}
+.card-2 {
+    margin-left: 40px;
+}
+.basic,
+.pro {
+    background-color: rgb(0 160 255);
+    color: white;
+    position: absolute;
+    width: calc((100% - 20px) / 1);
+    padding: 10px 0;
+    border-radius: 5px;
+    left: 10px;
+    top: 15px;
+}
+.basic::after, 
+.pro::after {
+    content: "Free";
+    /* color customize*/
+    background-color: #DDD;
+    color: black;
+    /* width, height, etc... customize */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* font customize*/
+    text-align: center;
+    line-height: 190px;
+    font-size: 40px;
+    font-weight: lighter;
+    /* position customize*/
+    position: absolute;
+    top: 60px;
+    right: 50%;
+    margin-right: -100px;
+}
+.pro::after {
+    content: "$30";
+}
+.card-1::after {
+    content: "Or";
+    /* color customize*/
+    color: white;
+    background-color: rgb(0 160 255);
+    /* width, height, etc... customize */
+    border-radius: 50%;
+    padding: 4px;
+    /* font customize*/
+    font-size: 12px;
+    /* position customize*/
+    position: absolute;
+    z-index: 1;
+    right: -31px;
+    top: 50%;
+}
+.card-2::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(0 160 255);
+    height: 100%;
+    width: 1px;
+    left: -21px;
+}
